@@ -123,3 +123,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #     'debug_toolbar.panels.logging.LoggingPanel',
 #     'debug_toolbar.panels.redirects.RedirectsPanel',
 # )
+
+
+LOGIN_REDIRECT_URL = "/"
