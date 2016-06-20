@@ -78,7 +78,7 @@ def add_comment_to_post(request, pk):
             return redirect('blog.views.post_detail', pk=post.pk)
     else:
         form = CommentForm()
-
+        return render(request, 'blog/add_comment_to_post.html', {'form': form})
 
 
 @login_required
@@ -94,28 +94,3 @@ def comment_remove(request,pk):
     post_pk = comment.post.pk
     comment.delete()
     return redirect('blog.views.post_detail',pk=post_pk)
-
-
-
-
-
-
-
-
-
-
-
-
-#########################
-
-
-
-
-
-
-
-
-
-
-
-    return render(request, 'blog/add_comment_to_post.html', {'form': form})
